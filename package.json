@@ -21,7 +21,7 @@
       "url": "https://github.com/assemble/assemble-handlebars/blob/master/LICENSE-MIT"
     }
   ],
-  "main": "Gruntfile.js",
+  "main": "./lib/assemble-handlebars",
   "engines": {
     "node": ">= 0.8.0"
   },
@@ -41,7 +41,7 @@
     "gruntplugin"
   ],
   "dependencies": {
-    "helper-lib": "~0.1.32",
+    "helper-lib": "https://github.com/assemble/helper-lib/tarball/master",
     "handlebars": "~1.0.10"
   }
 }
