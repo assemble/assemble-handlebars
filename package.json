@@ -39,5 +39,9 @@
   },
   "keywords": [
     "gruntplugin"
-  ]
+  ],
+  "dependencies": {
+    "helper-lib": "~0.1.32",
+    "handlebars": "~1.0.10"
+  }
 }
