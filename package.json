@@ -41,8 +41,8 @@
     "gruntplugin"
   ],
   "dependencies": {
-    "helper-lib": "https://github.com/assemble/helper-lib/tarball/master",
-    "handlebars": "~1.0.10",
-    "lodash": "~1.2.1"
+    "helper-lib": "latest",
+    "handlebars": "latest",
+    "lodash": "latest"
   }
 }
