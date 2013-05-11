@@ -41,7 +41,7 @@
     "gruntplugin"
   ],
   "dependencies": {
-    "helper-lib": "~0.1.32",
+    "helper-lib": "~0.2.x",
     "handlebars": "latest",
     "lodash": "latest"
   }
