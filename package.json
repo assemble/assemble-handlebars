@@ -5,9 +5,18 @@
   "homepage": "https://github.com/assemble/assemble-handlebars",
   "author": {
     "name": "Assemble",
-    "email": "brian.woodward@gmail.com",
     "url": "https://github.com/assemble/assemble"
   },
+  "contributors": [
+    {
+      "name": "Brian Woodward",
+      "url": "https://github.com/doowb"
+    },
+    {
+      "name": "Jon Schlinkert",
+      "url": "https://github.com/jonschlinkert"
+    }
+  ],
   "repository": {
     "type": "git",
     "url": "git://github.com/assemble/assemble-handlebars.git"
@@ -38,10 +47,12 @@
     "grunt": "~0.4.1"
   },
   "keywords": [
-    "gruntplugin"
+    "assemble"
+    "handlebars"
+    "template"
   ],
   "dependencies": {
-    "helper-lib": "~0.2.2",
+    "helper-lib": "latest",
     "handlebars": "latest",
     "lodash": "latest"
   }
