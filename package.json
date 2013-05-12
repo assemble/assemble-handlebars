@@ -47,8 +47,8 @@
     "grunt": "~0.4.1"
   },
   "keywords": [
-    "assemble"
-    "handlebars"
+    "assemble",
+    "handlebars",
     "template"
   ],
   "dependencies": {
