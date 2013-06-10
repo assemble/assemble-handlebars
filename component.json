@@ -1,7 +1,7 @@
 {
   "name": "assemble-handlebars",
   "description": "Assemble engine plugin for Handlebars templates.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "repo": "assemble/assemble-handlebars",
   "main": [
     "./lib/assemble-handlebars.js"
