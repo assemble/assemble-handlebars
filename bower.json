@@ -1,17 +1,14 @@
 {
   "name": "assemble-handlebars",
   "description": "Assemble engine plugin for Handlebars templates.",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "repo": "assemble/assemble-handlebars",
   "main": [
     "./lib/assemble-handlebars.js"
   ],
   "dependencies": {
-    "chai": "~1.5.0",
-    "grunt": "~0.4.1",
-    "handlebars-helpers": "~1.5.0",
-    "grunt-contrib-jshint": "~0.1.0",
-    "grunt-contrib-watch": "~0.2.0",
-    "grunt-mocha-test": "~0.2.0"
-  }
+    "handlebars-helpers": "~0.2.6",
+    "handlebars": "1.0.10",
+    "lodash": "~1.2.1"
+  },
 }
