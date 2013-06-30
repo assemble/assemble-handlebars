@@ -38,7 +38,7 @@
     "test": "grunt test"
   },
   "dependencies": {
-    "helper-lib": "~0.2.0",
+    "handlebars-helpers": "~0.2.6",
     "handlebars": "1.0.10",
     "lodash": "~1.2.1"
   },
@@ -54,6 +54,8 @@
   "keywords": [
     "assemble",
     "handlebars",
+    "handlebars templates",
+    "handlebars helpers",
     "template"
   ]
 }
