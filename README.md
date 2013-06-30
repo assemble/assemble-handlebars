@@ -2,7 +2,7 @@
 
 > Assemble engine plugin for Handlebars templates.
 
-See [assemble](https://github.com/assemble/assemble) for documentation.
+See [assemble](http://assemble.io) for documentation.
 
 
 ## Contributing
