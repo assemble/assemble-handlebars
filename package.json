@@ -1,7 +1,7 @@
 {
   "name": "assemble-handlebars",
   "description": "Assemble engine plugin for Handlebars templates.",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "homepage": "https://github.com/assemble/assemble-handlebars",
   "author": {
     "name": "Assemble",
@@ -38,7 +38,7 @@
     "test": "grunt test"
   },
   "dependencies": {
-    "handlebars-helpers": "~0.2.6",
+    "handlebars-helpers": "~0.3.0",
     "handlebars": "1.0.10",
     "lodash": "~1.2.1"
   },
