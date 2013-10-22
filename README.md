@@ -1,14 +1,11 @@
-# assemble-handlebars
+# assemble-handlebars [![NPM version](https://badge.fury.io/js/blog.png)](http://badge.fury.io/js/blog)
 
-> Assemble engine plugin for Handlebars templates.
+> Handlebars.js engine plugin for Assemble, the static site generator for Node.js, Grunt.js and Yeoman
 
-See [assemble](http://assemble.io) for documentation.
-
-Visit [handlebars-helpers](https://github.com/assemble/handlebars-helpers) to learn about the **more than 100** helpers that can be used with Assemble.
+See [assemble](http://assemble.io/) for documentation, or visit [handlebars-helpers](http://assemble.io/helpers/) to browse through **more than 120** helpers that can be used with Assemble.
 
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Please lint and test your code using Grunt.
-
 
 ## Authors
 
