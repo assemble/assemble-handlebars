@@ -1,13 +1,22 @@
-var handlebars = require('handlebars');
-var helpers = require('handlebars-helpers');
 var _ = require('lodash');
+var handlebars = require('handlebars');
+var helpers = null;
+
+try {
+  helpers = require('handlebars-helpers');
+} catch (ex) {
+  console.log('WARNING: ', ex);
+  console.log('To use handlebars-helpers run `npm install handlebars-helpers`');
+}
 
 var plugin = function() {
   'use strict';
 
   var init = function(options) {
     // register built-in helpers
-    helpers.register(handlebars, options);
+    if(helpers && helpers.register) {
+      helpers.register(handlebars, options);
+    }
   };
 
   var compile = function(src, options, callback) {
@@ -42,14 +51,8 @@ var plugin = function() {
   };
 
   var registerPartial = function(filename, content) {
-    var tmpl;
     try {
-      if(typeof content === 'string') {
-        tmpl = handlebars.compile(content);
-      } else {
-        tmpl = content;
-      }
-      handlebars.registerPartial(filename, tmpl);
+      handlebars.registerPartial(filename, content);
     } catch (ex) {}
   };
 
