@@ -1,7 +1,7 @@
 {
   "name": "assemble-handlebars",
   "description": "Handlebars engine plugin for Assemble, the static site generator for Grunt.js and Yeoman.",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "homepage": "https://github.com/assemble/assemble-handlebars",
   "author": {
     "name": "Brian Woodward",
@@ -39,7 +39,7 @@
   },
   "dependencies": {
     "lodash": "~2.2.1",
-    "handlebars": "~1.0.12",
+    "handlebars": "1.0.10",
     "handlebars-helpers": "~0.3.16"
   },
   "devDependencies": {
