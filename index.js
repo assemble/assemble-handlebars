@@ -1,3 +1,12 @@
+/*!
+ * assemble-handlebars
+ * https://github.com/assemble/assemble-handlebars
+ *
+ * Copyright (c) 2013 Assemble
+ * Licensed under the MIT license.
+ */
+
+
 var _ = require('lodash');
 var handlebars = require('handlebars');
 var helpers = null;
