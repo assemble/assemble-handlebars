@@ -11,6 +11,12 @@ var _ = require('lodash');
 var handlebars = require('handlebars');
 var helpers = null;
 
+// Custom nameLookup
+var nameLookup = handlebars.JavaScriptCompiler.prototype.nameLookup;
+handlebars.JavaScriptCompiler.prototype.nameLookup = function (parent, name, type) {
+  return name.indexOf("root") === 0 ? 'data' : nameLookup(parent, name, type);
+};
+
 try {
   helpers = require('handlebars-helpers');
 } catch (ex) {
@@ -42,9 +48,9 @@ var plugin = function() {
     var content;
     try {
       if(typeof tmpl === 'string') {
-        tmpl = handlebars.compile(tmpl, options);
+        tmpl = handlebars.compile(tmpl, _.defaults({data: true}, options));
       }
-      content = tmpl(options);
+      content = tmpl(options, {data: options});
     } catch (ex) {
       callback(ex, null);
     }
