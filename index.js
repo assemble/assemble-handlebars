@@ -21,10 +21,10 @@ try {
 var plugin = function() {
   'use strict';
 
-  var init = function(options) {
+  var init = function(options, params) {
     // register built-in helpers
     if(helpers && helpers.register) {
-      helpers.register(handlebars, options);
+      helpers.register(handlebars, options, params);
     }
   };
 
