@@ -39,7 +39,7 @@
   },
   "dependencies": {
     "lodash": "~2.2.1",
-    "handlebars-helpers": "~0.4.0",
+    "handlebars-helpers": "git://github.com/doowb/handlebars-helpers",
     "handlebars": "~1.3.0"
   },
   "devDependencies": {
