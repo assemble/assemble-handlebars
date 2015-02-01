@@ -39,8 +39,8 @@
   },
   "dependencies": {
     "lodash": "~2.2.1",
-    "handlebars": "~1.3.0",
-    "handlebars-helpers": "~0.5.1"
+    "handlebars": "~2.0.0",
+    "handlebars-helpers": "assemble/handlebars-helpers#handlebars-2.0.0"
   },
   "devDependencies": {
     "grunt": "~0.4.1",
