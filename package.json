@@ -39,7 +39,7 @@
   },
   "dependencies": {
     "lodash": "~2.2.1",
-    "handlebars": "~2.0.0",
+    "handlebars": "~3.0.0",
     "handlebars-helpers": "assemble/handlebars-helpers#handlebars-2.0.0"
   },
   "devDependencies": {
