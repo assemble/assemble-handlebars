@@ -1,13 +1,13 @@
 {
   "name": "assemble-handlebars",
-  "description": "Handlebars engine plugin for Assemble, the static site generator for Grunt.js and Yeoman.",
+  "description": "Handlebars engine plugin for grunt-assemble. This is only used in assemble versions 0.4.x and lower.",
   "version": "0.2.4",
   "homepage": "https://github.com/assemble/assemble-handlebars",
   "author": {
     "name": "Brian Woodward",
     "url": "https://github.com/doowb"
   },
-  "contributors": [
+  "maintainers": [
     {
       "name": "Brian Woodward",
       "url": "https://github.com/doowb"
@@ -39,20 +39,20 @@
     "test": "grunt test"
   },
   "dependencies": {
-    "lodash": "~2.2.1",
-    "handlebars": "~3.0.0",
-    "handlebars-helpers": "~0.5.1"
+    "handlebars": "^3.0.1",
+    "handlebars-helpers": "^0.5.8"
   },
   "devDependencies": {
-    "grunt": "~0.4.1",
-    "grunt-contrib-jshint": "~0.6.4"
+    "grunt": "^0.4.5",
+    "grunt-contrib-jshint": "^0.11.2",
+    "verb": "^0.6.2"
   },
   "keywords": [
     "assemble",
     "assembleengine",
     "handlebars",
-    "handlebars templates",
-    "handlebars helpers",
-    "template"
+    "helpers",
+    "template",
+    "templates"
   ]
 }
