@@ -5,74 +5,53 @@
  * Licensed under the MIT License.
  */
 
-var _ = require('lodash');
+'use strict';
+
 var handlebars = require('handlebars');
-var helpers = null;
+var helpers = require('handlebars-helpers');
 
-try {
-  helpers = require('handlebars-helpers');
-} catch (ex) {
-  console.log('WARNING: ', ex);
-  console.log('To use handlebars-helpers run `npm install handlebars-helpers`');
-}
-
-var plugin = function() {
-  'use strict';
-
-  var init = function(options, params) {
-    // register built-in helpers
-    if(helpers && helpers.register) {
-      helpers.register(handlebars, options, params);
-    }
-  };
-
-  var compile = function(src, options, callback) {
-    var tmpl;
-    try {
-      tmpl = handlebars.compile(src, options);
-    } catch(ex) {
-      callback(ex, null);
-    }
-    callback(null, tmpl);
-  };
-
-  var render = function(tmpl, options, callback) {
-    var content;
-    try {
-      if(typeof tmpl === 'string') {
-        tmpl = handlebars.compile(tmpl, options);
-      }
-      content = tmpl(options);
-    } catch (ex) {
-      callback(ex, null);
-    }
-    callback(null, content);
-  };
-
-  var registerFunctions = function(helperFunctions) {
-    if(helperFunctions) {
-      _.forOwn(helperFunctions, function(fn, key) {
-        handlebars.registerHelper(key, fn);
-      });
-    }
-  };
-
-  var registerPartial = function(filename, content) {
-    try {
-      handlebars.registerPartial(filename, content);
-    } catch (ex) {}
-  };
-
-
-  return {
-    init: init,
-    compile: compile,
-    render: render,
-    registerFunctions: registerFunctions,
-    registerPartial: registerPartial,
-    handlebars: handlebars
-  };
-
+// register built-in helpers
+exports.init = function (options, params) {
+  if (helpers && helpers.register) {
+    helpers.register(handlebars, options, params);
+  }
 };
 
-module.exports = exports = plugin();
+exports.compile = function (str, context, cb) {
+  var fn;
+  try {
+    fn = handlebars.compile(str, context);
+  } catch (err) {
+    cb(err);
+  }
+  cb(null, fn);
+};
+
+exports.render = function (template, context, cb) {
+  var res;
+  try {
+    if (typeof template === 'string') {
+      template = handlebars.compile(template, context);
+    }
+    res = template(context);
+  } catch (err) {
+    return cb(err);
+  }
+  cb(null, res);
+};
+
+exports.registerFunctions = function (fns) {
+  fns = fns || {};
+
+  for (var key in fns) {
+    if (fns.hasOwnProperty(key)) {
+      handlebars.registerHelper(key, fns[key]);
+    }
+  }
+};
+
+exports.registerPartial = function (name, str) {
+  try {
+    handlebars.registerPartial(name, str);
+  } catch (err) {}
+};
