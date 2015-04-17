@@ -55,3 +55,5 @@ exports.registerPartial = function (name, str) {
     handlebars.registerPartial(name, str);
   } catch (err) {}
 };
+
+exports.handlebars = handlebars;
