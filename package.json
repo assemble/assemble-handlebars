@@ -1,7 +1,7 @@
 {
   "name": "assemble-handlebars",
   "description": "Handlebars engine plugin for grunt-assemble. This is only used in assemble versions 0.4.x and lower.",
-  "version": "0.2.5",
+  "version": "0.2.6",
   "homepage": "https://github.com/assemble/assemble-handlebars",
   "author": {
     "name": "Brian Woodward",
@@ -39,7 +39,7 @@
     "test": "grunt test"
   },
   "dependencies": {
-    "handlebars": "^3.0.1",
+    "handlebars": "^1.3.0",
     "handlebars-helpers": "^0.5.8"
   },
   "devDependencies": {
