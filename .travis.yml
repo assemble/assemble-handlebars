@@ -1,0 +1,7 @@
+sudo: false
+language: node_js
+install: npm install -g grunt-cli && npm install
+node_js:
+  - "4.8"
+  - "6.10"
+  - "7.7"
