@@ -7,14 +7,16 @@
 
 'use strict';
 
-var handlebars = require('handlebars');
 var helpers = require('handlebars-helpers');
+var handlebars = require('handlebars');
 
 // register built-in helpers
 exports.init = function (options, params) {
-  if (helpers && helpers.register) {
-    helpers.register(handlebars, options, params);
+  options = options || {};
+  if (options.handlebars) {
+    handlebars = options.handlebars;
   }
+  helpers(options);
 };
 
 exports.compile = function (str, context, cb) {
@@ -22,7 +24,7 @@ exports.compile = function (str, context, cb) {
   try {
     fn = handlebars.compile(str, context);
   } catch (err) {
-    cb(err);
+    return cb(err);
   }
   cb(null, fn);
 };
