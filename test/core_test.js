@@ -43,10 +43,10 @@ describe('Render', function() {
   });
 
   // TODO: Fix this tests (the loading of helpers)
-  it.skip("renders a template with a helper", function(done) {
+  it("renders a template with a helper", function(done) {
     var engine = require('../index');
-    engine.init();
-    engine.compile('{{sum "[1,2,3,4,5]" 2}}', {}, function(err, tmpl) {
+    engine.init({});
+    engine.compile('{{addCommas 2222222}}', {}, function(err, tmpl) {
       if(err) {
         return done(err);
       }
@@ -54,7 +54,7 @@ describe('Render', function() {
         if(err) {
           return done(err);
         }
-        expect(content).to.equal('15');
+        expect(content).to.equal('2,222,222');
         done();
       });
     });
