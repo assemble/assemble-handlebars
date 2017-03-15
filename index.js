@@ -11,7 +11,7 @@ var helpers = require('handlebars-helpers');
 var handlebars = require('handlebars');
 
 // register built-in helpers
-exports.init = function (options, params) {
+exports.init = function(options, params) {
   options = options || {};
   if (options.handlebars) {
     handlebars = options.handlebars;
@@ -19,7 +19,7 @@ exports.init = function (options, params) {
   helpers(options);
 };
 
-exports.compile = function (str, context, cb) {
+exports.compile = function(str, context, cb) {
   var fn;
   try {
     fn = handlebars.compile(str, context);
@@ -29,7 +29,7 @@ exports.compile = function (str, context, cb) {
   cb(null, fn);
 };
 
-exports.render = function (template, context, cb) {
+exports.render = function(template, context, cb) {
   var res;
   try {
     if (typeof template === 'string') {
@@ -42,7 +42,7 @@ exports.render = function (template, context, cb) {
   cb(null, res);
 };
 
-exports.registerFunctions = function (fns) {
+exports.registerFunctions = function(fns) {
   fns = fns || {};
 
   for (var key in fns) {
@@ -52,7 +52,7 @@ exports.registerFunctions = function (fns) {
   }
 };
 
-exports.registerPartial = function (name, str) {
+exports.registerPartial = function(name, str) {
   try {
     handlebars.registerPartial(name, str);
   } catch (err) {}
