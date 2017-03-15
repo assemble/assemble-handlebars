@@ -10,11 +10,11 @@ module.exports = function(grunt) {
 
   // Project configuration.
   grunt.initConfig({
-    jshint: {
-      all: ['*.js', 'test/*.js'],
-      options: {
-        jshintrc: '.jshintrc'
-      }
+    eslint: {
+      // options: {
+      //   jshintrc: '.jshintrc'
+      // },
+      src: ['*.js', 'test/*.js']
     },
 
     mochaTest: {
@@ -27,9 +27,10 @@ module.exports = function(grunt) {
     }
   });
 
-  grunt.loadNpmTasks('grunt-contrib-jshint');
+  grunt.loadNpmTasks('gruntify-eslint');
   grunt.loadNpmTasks('grunt-mocha-test');
 
   grunt.registerTask('test', ['mochaTest']);
-  grunt.registerTask('default', ['jshint', 'test']);
+  grunt.registerTask('lint', ['eslint']);
+  grunt.registerTask('default', ['lint', 'test']);
 };
