@@ -39,6 +39,7 @@
     "grunt": "^1.0.1",
     "grunt-mocha-test": "^0.13.2",
     "gruntify-eslint": "^3.1.0",
+    "gulp-format-md": "^0.1.11",
     "mocha": "^3.2.0"
   },
   "keywords": [
@@ -48,5 +49,18 @@
     "helpers",
     "template",
     "templates"
-  ]
+  ],
+  "verb": {
+    "toc": false,
+    "layout": "assemble",
+    "tasks": [
+      "readme"
+    ],
+    "plugins": [
+      "gulp-format-md"
+    ],
+    "lint": {
+      "reflinks": true
+    }
+  }
 }
