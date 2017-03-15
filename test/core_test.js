@@ -1,11 +1,12 @@
-var expect = require('chai').expect;
+require('mocha');
+var assert = require('assert');
 
 describe('Init', function() {
   it('initializes the engine', function() {
     var engine = require('../index');
     engine.init({});
     // TODO: Add test with actual options
-    expect(typeof engine).to.equal('object');
+    assert.equal(typeof engine, 'object');
   });
 });
 
@@ -16,10 +17,10 @@ describe('Compile', function() {
       if (err) {
         return done(err);
       }
-      expect(typeof tmpl).to.equal('function');
-      expect(Object.keys(tmpl)).to.deep.equal(['_setup', '_child']);
-      expect(typeof tmpl._setup).to.equal('function');
-      expect(typeof tmpl._child).to.equal('function');
+      assert.equal(typeof tmpl, 'function');
+      assert.deepEqual(Object.keys(tmpl), ['_setup', '_child']);
+      assert.equal(typeof tmpl._setup, 'function');
+      assert.equal(typeof tmpl._child, 'function');
       done();
     });
   });
@@ -36,7 +37,7 @@ describe('Render', function() {
         if (err) {
           return done(err);
         }
-        expect(content).to.equal('bar');
+        assert.equal(content, 'bar');
         done();
       });
     });
@@ -54,7 +55,7 @@ describe('Render', function() {
         if (err) {
           return done(err);
         }
-        expect(content).to.equal('2,222,222');
+        assert.equal(content, '2,222,222');
         done();
       });
     });
@@ -77,7 +78,7 @@ describe('Register Function', function() {
         if (err) {
           return done(err);
         }
-        expect(content).to.equal('test');
+        assert.equal(content, 'test');
         done();
       });
     });
@@ -96,7 +97,7 @@ describe('Register Partial', function() {
         if (err) {
           return done(err);
         }
-        expect(content).to.equal('foo bar');
+        assert.equal(content, 'foo bar');
         done();
       });
     });

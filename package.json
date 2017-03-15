@@ -36,7 +36,6 @@
     "handlebars-helpers": "^0.6.0"
   },
   "devDependencies": {
-    "chai": "^3.5.0",
     "grunt": "^1.0.1",
     "grunt-mocha-test": "^0.13.2",
     "gruntify-eslint": "^3.1.0",
