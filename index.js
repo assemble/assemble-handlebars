@@ -1,7 +1,7 @@
 /*!
  * assemble-handlebars <https://github.com/assemble/assemble-handlebars>
  *
- * Copyright (c) 2013-2015, Brian Woodward.
+ * Copyright (c) 2013-2017, Brian Woodward.
  * Licensed under the MIT License.
  */
 
