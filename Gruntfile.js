@@ -11,9 +11,6 @@ module.exports = function(grunt) {
   // Project configuration.
   grunt.initConfig({
     eslint: {
-      // options: {
-      //   jshintrc: '.jshintrc'
-      // },
       src: ['*.js', 'test/*.js']
     },
 
